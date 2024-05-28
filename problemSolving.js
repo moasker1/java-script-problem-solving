@@ -186,3 +186,64 @@ function findMissingNumber(arr) {
 
 
 console.log(findMissingNumber([1, 2, 3, 5, 6]));
+
+
+function generateRandomNumber(min, max) {
+    return Math.random() * (max - min) ;
+}
+
+console.log(generateRandomNumber(10, 100)); 
+
+
+function countOccurrences(string, character){
+    let times = 0
+    for (let i = 0; i < string.length; i++) {
+        if(string[i] == character){
+            times += 1
+        }
+    }
+    return times
+}
+
+console.log(countOccurrences("banana", "a"))
+
+function secondLargest (array){
+    let max = Math.max(...array)
+    let second = Number.MIN_SAFE_INTEGER;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < max && array[i] > second) {
+            second = array[i]
+        }
+    }
+    return second
+}
+
+console.log(secondLargest([45,65,78,98,12]))
+
+
+function containsSubstring(str1, str2){
+    if (str1.includes(str2)) {
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+console.log(containsSubstring("akkka", "kkk"))
+
+
+function gcd(num1, num2) {
+    let gcd = Math.min(num1, num2); 
+    while (gcd > 1) {
+        if (num1 % gcd === 0 && num2 % gcd === 0) {
+            return gcd; 
+        }
+        gcd--; 
+    }
+    return 1; 
+}
+
+console.log(gcd(8, 12)); 
+
+
